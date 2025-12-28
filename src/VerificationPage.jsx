@@ -22,6 +22,10 @@ export default function VerificationPage() {
     const file = e.target.files?.[0] || e.dataTransfer?.files?.[0];
     if (!file) return;
 
+    if(e.target.value) {
+        e.target.value = '';
+    }
+
     setFileName(file.name);
     setViewState('processing');
 
@@ -92,7 +96,7 @@ export default function VerificationPage() {
 
         <div className="w-full max-w-xl mb-24 relative">
             
-          <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-3xl opacity-20 blur-xl animate-pulse"></div>
+          <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-3xl opacity-20 blur-xl animate-pulse pointer-events-none"></div>
 
           <AnimatePresence mode="wait">
             
