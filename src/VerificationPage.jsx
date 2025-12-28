@@ -19,7 +19,9 @@ export default function VerificationPage() {
 
   const onFileSelect = useCallback(async (e) => {
     e.preventDefault();
+    
     const file = e.target.files?.[0] || e.dataTransfer?.files?.[0];
+    
     if (!file) return;
 
     if(e.target.value) {
