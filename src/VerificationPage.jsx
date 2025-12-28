@@ -9,7 +9,7 @@ import {
   Fingerprint, ChevronDown, Terminal 
 } from 'lucide-react';
 
-const BACKEND_URL = "https://your-backend-production.up.railway.app/api/evidence";
+ const BACKEND_URL = "https://truthchain-backend.up.railway.app/api/evidence";
 
 export default function VerificationPage() {
   const [viewState, setViewState] = useState('idle'); 
